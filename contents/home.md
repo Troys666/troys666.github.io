@@ -2,7 +2,7 @@
 
 [![senli1073](https://img.shields.io/badge/senli1073-github-blue?logo=github)](https://github.com/Troys666)
 
-He is currently pursuing a Master's Degree in Computer Science, at School of Computer Science and Technology, China University of Mining and Technology, China.
+Hello, my name is Troys, and I am a senior student at Xi'an Jiaotong University, majoring in Statistics. I am expected to graduate in 2025. My research interests lie primarily in the fields of deep learning, continual learning, and data analysis. I have a strong foundation in statistical modeling and programming, and I am passionate about applying machine learning techniques to real-world problems.
 
 #### Email
 stst1017[at]stu.xjtu.edu.cn
