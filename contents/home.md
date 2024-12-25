@@ -1,6 +1,6 @@
 
 
-[[Troys'github homepage]](https://github.com/Troys666)
+[![Static Badge](https://img.shields.io/badge/Troys-github-blue)](https://github.com/Troys666)
 
 Hello, my name is Troys, and I am a senior student at Xi'an Jiaotong University, majoring in Statistics. I am expected to graduate in 2025. My research interests lie primarily in the fields of deep learning, continual learning, and data analysis. I have a strong foundation in statistical modeling and programming, and I am passionate about applying machine learning techniques to real-world problems.
 
