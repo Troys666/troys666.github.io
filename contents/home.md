@@ -8,7 +8,7 @@ Hello, my name is Troys, and I am a senior student at Xi'an Jiaotong University,
 [[stst1017@stu.xjtu.edu.cn]](mailto:stst1017@stu.xjtu.edu.cn)
 
 #### Education
-M.E., Statistics, Xi'an Jiaotong University, 2025— future  [[advised by professor Deyu meng]](https://gr.xjtu.edu.cn/en/web/dymeng)\
+M.E., Statistics, Xi'an Jiaotong University, 2025— future  [[advised by professor Deyu Meng]](https://gr.xjtu.edu.cn/en/web/dymeng)\
 B.E., Statistics, XJTU, 2021—2025.
 
 #### Research Interests
