@@ -223,9 +223,9 @@ body.theme-luka a:hover {
 
 .visitor-card {
     width: 220px;
-    margin: 40px auto 0;
+    margin: 32px auto 0;
     color: var(--luka-muted);
-    text-align: left;
+    text-align: center;
 }
 
 .visitor-card-body {
@@ -235,8 +235,12 @@ body.theme-luka a:hover {
 
 .visitor-map {
     width: 100%;
-    min-height: 120px;
     overflow: hidden;
+}
+
+.visitor-map a {
+    display: inline-block;
+    line-height: 0;
 }
 
 .visitor-map iframe,
@@ -245,6 +249,7 @@ body.theme-luka a:hover {
 .visitor-map embed {
     max-width: 100%;
     border: 0;
+    background: transparent;
 }
 
 .content {
