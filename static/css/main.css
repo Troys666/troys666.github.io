@@ -223,7 +223,7 @@ body.theme-luka a:hover {
 
 .visitor-card {
     width: 220px;
-    margin: 32px auto 0;
+    margin: 26px auto 0;
     color: var(--luka-muted);
     text-align: center;
 }
@@ -235,27 +235,19 @@ body.theme-luka a:hover {
 
 .visitor-map {
     width: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
-.visitor-map a,
-.visitor-map > span {
-    display: inline-block;
-    line-height: 0;
-}
-
-.visitor-map > span {
-    max-width: 100%;
-    margin-right: 0 !important;
-}
-
-.visitor-map iframe,
-.visitor-map img,
-.visitor-map object,
-.visitor-map embed {
-    max-width: 100%;
-    border: 0;
-    background: transparent;
+.visitor-canvas {
+    width: 200px;
+    height: 100px;
+    display: block;
+    border-radius: 6px;
+    opacity: 0.9;
 }
 
 .content {
