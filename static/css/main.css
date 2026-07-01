@@ -238,9 +238,15 @@ body.theme-luka a:hover {
     overflow: hidden;
 }
 
-.visitor-map a {
+.visitor-map a,
+.visitor-map > span {
     display: inline-block;
     line-height: 0;
+}
+
+.visitor-map > span {
+    max-width: 100%;
+    margin-right: 0 !important;
 }
 
 .visitor-map iframe,
