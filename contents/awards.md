@@ -1,1 +1,1 @@
-- Outstanding Academics of XJTU, 2021-2024.
+- Outstanding Graduate of Xi'an Jiaotong University
