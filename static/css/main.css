@@ -1,25 +1,33 @@
 /* Luka-inspired academic homepage for S.Th!nk. */
 
 :root {
-    --luka-bg: #faf9f7;
-    --luka-panel: #ffffff;
-    --luka-text: #342f25;
-    --luka-muted: #776f63;
-    --luka-accent: #c2714f;
-    --luka-border: rgba(194, 113, 79, 0.22);
-    --luka-shadow: rgba(56, 45, 35, 0.12);
-    --luka-footer-border: rgba(194, 113, 79, 0.18);
+    --luka-bg: #fbf4e8;
+    --luka-panel: #fffaf1;
+    --luka-text: #31281d;
+    --luka-muted: #786b55;
+    --luka-accent: #b76d3a;
+    --luka-border: rgba(183, 109, 58, 0.24);
+    --luka-shadow: rgba(87, 61, 31, 0.12);
+    --luka-footer-border: rgba(183, 109, 58, 0.18);
+    --luka-map-overlay: rgba(255, 246, 226, 0.2);
+    --luka-map-grid: rgba(183, 109, 58, 0.14);
+    --luka-map-point: rgba(183, 109, 58, 0.9);
+    --luka-map-halo: rgba(183, 109, 58, 0.22);
 }
 
 [data-theme="dark"] {
-    --luka-bg: #1b1a17;
-    --luka-panel: #23211d;
-    --luka-text: #e2ded5;
-    --luka-muted: #aaa195;
-    --luka-accent: #e08b68;
-    --luka-border: rgba(224, 139, 104, 0.24);
+    --luka-bg: #211b14;
+    --luka-panel: #2a231a;
+    --luka-text: #eee3d0;
+    --luka-muted: #b8a78d;
+    --luka-accent: #d88954;
+    --luka-border: rgba(216, 137, 84, 0.24);
     --luka-shadow: rgba(0, 0, 0, 0.32);
-    --luka-footer-border: rgba(224, 139, 104, 0.2);
+    --luka-footer-border: rgba(216, 137, 84, 0.2);
+    --luka-map-overlay: rgba(42, 35, 26, 0.18);
+    --luka-map-grid: rgba(216, 137, 84, 0.16);
+    --luka-map-point: rgba(216, 137, 84, 0.92);
+    --luka-map-halo: rgba(216, 137, 84, 0.24);
 }
 
 html {
@@ -247,7 +255,8 @@ body.theme-luka a:hover {
     height: 100px;
     display: block;
     border-radius: 6px;
-    opacity: 0.9;
+    background: var(--luka-panel);
+    opacity: 0.96;
 }
 
 .content {
@@ -424,14 +433,18 @@ body.theme-luka a:hover {
 
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-        --luka-bg: #1b1a17;
-        --luka-panel: #23211d;
-        --luka-text: #e2ded5;
-        --luka-muted: #aaa195;
-        --luka-accent: #e08b68;
-        --luka-border: rgba(224, 139, 104, 0.24);
+        --luka-bg: #211b14;
+        --luka-panel: #2a231a;
+        --luka-text: #eee3d0;
+        --luka-muted: #b8a78d;
+        --luka-accent: #d88954;
+        --luka-border: rgba(216, 137, 84, 0.24);
         --luka-shadow: rgba(0, 0, 0, 0.32);
-        --luka-footer-border: rgba(224, 139, 104, 0.2);
+        --luka-footer-border: rgba(216, 137, 84, 0.2);
+        --luka-map-overlay: rgba(42, 35, 26, 0.18);
+        --luka-map-grid: rgba(216, 137, 84, 0.16);
+        --luka-map-point: rgba(216, 137, 84, 0.92);
+        --luka-map-halo: rgba(216, 137, 84, 0.24);
     }
 }
 

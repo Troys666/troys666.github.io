@@ -83,6 +83,10 @@ function setupVisitorMap() {
     let mapReady = false;
     let currentVisitors = [];
 
+    function cssVar(name, fallback) {
+        return getComputedStyle(document.documentElement).getPropertyValue(name).trim() || fallback;
+    }
+
     function project(lat, lon) {
         return {
             x: ((lon + 180) / 360) * width,
@@ -90,23 +94,28 @@ function setupVisitorMap() {
         };
     }
 
+    function visitorPoint(lat, lon) {
+        const point = project(lat, lon);
+        return { x: point.x - 5, y: point.y + 3 };
+    }
+
     function drawBase() {
         ctx.clearRect(0, 0, width, height);
-        ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--luka-panel').trim() || '#ffffff';
+        ctx.fillStyle = cssVar('--luka-panel', '#fffaf1');
         ctx.fillRect(0, 0, width, height);
 
         if (mapReady) {
             ctx.save();
-            ctx.globalAlpha = 0.58;
-            ctx.filter = 'saturate(0.32) contrast(0.9)';
+            ctx.globalAlpha = 0.72;
+            ctx.filter = 'sepia(0.18) saturate(0.38) contrast(0.92) brightness(1.1)';
             ctx.drawImage(mapImage, 0, 0, width, height);
             ctx.restore();
-            ctx.fillStyle = 'rgba(250, 249, 247, 0.18)';
+            ctx.fillStyle = cssVar('--luka-map-overlay', 'rgba(255, 250, 241, 0.08)');
             ctx.fillRect(0, 0, width, height);
             return;
         }
 
-        ctx.strokeStyle = 'rgba(194, 113, 79, 0.16)';
+        ctx.strokeStyle = cssVar('--luka-map-grid', 'rgba(183, 109, 58, 0.14)');
         ctx.lineWidth = 1;
         for (let lon = -120; lon <= 120; lon += 60) {
             const start = project(-70, lon);
@@ -134,16 +143,15 @@ function setupVisitorMap() {
             const key = `${visitor.lat.toFixed(1)},${visitor.lon.toFixed(1)}`;
             if (seen.has(key)) return;
             seen.add(key);
-            const point = project(visitor.lat, visitor.lon);
+            const point = visitorPoint(visitor.lat, visitor.lon);
             ctx.beginPath();
-            ctx.arc(point.x, point.y, 4.5, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(194, 113, 79, 0.88)';
+            ctx.arc(point.x, point.y, 7, 0, Math.PI * 2);
+            ctx.fillStyle = cssVar('--luka-map-halo', 'rgba(183, 109, 58, 0.22)');
             ctx.fill();
             ctx.beginPath();
-            ctx.arc(point.x, point.y, 9, 0, Math.PI * 2);
-            ctx.strokeStyle = 'rgba(194, 113, 79, 0.22)';
-            ctx.lineWidth = 2;
-            ctx.stroke();
+            ctx.arc(point.x, point.y, 3.2, 0, Math.PI * 2);
+            ctx.fillStyle = cssVar('--luka-map-point', 'rgba(183, 109, 58, 0.9)');
+            ctx.fill();
         });
     }
 
