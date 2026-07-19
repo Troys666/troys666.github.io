@@ -68,7 +68,7 @@ body.theme-luka::before {
     inset: -20px;
     z-index: -2;
     background: url("../assets/img/background.jpeg") center / cover no-repeat;
-    filter: blur(6px) saturate(0.75);
+    filter: blur(3px) saturate(0.75);
 }
 
 body.theme-luka::after {
