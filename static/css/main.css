@@ -13,6 +13,7 @@
     --luka-map-grid: rgba(183, 109, 58, 0.14);
     --luka-map-point: rgba(183, 109, 58, 0.9);
     --luka-map-halo: rgba(183, 109, 58, 0.22);
+    --luka-page-overlay: rgba(251, 244, 232, 0.86);
 }
 
 [data-theme="dark"] {
@@ -28,6 +29,7 @@
     --luka-map-grid: rgba(216, 137, 84, 0.16);
     --luka-map-point: rgba(216, 137, 84, 0.92);
     --luka-map-halo: rgba(216, 137, 84, 0.24);
+    --luka-page-overlay: rgba(33, 27, 20, 0.84);
 }
 
 html {
@@ -42,6 +44,8 @@ body.theme-luka *::after {
 }
 
 body.theme-luka {
+    position: relative;
+    isolation: isolate;
     margin: 0;
     background: var(--luka-bg);
     color: var(--luka-text);
@@ -51,6 +55,27 @@ body.theme-luka {
     line-height: 1.65;
     text-rendering: optimizeLegibility;
     transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body.theme-luka::before,
+body.theme-luka::after {
+    content: "";
+    position: fixed;
+    pointer-events: none;
+}
+
+body.theme-luka::before {
+    inset: -20px;
+    z-index: -2;
+    background: url("../assets/img/background.jpeg") center / cover no-repeat;
+    filter: blur(10px) saturate(0.75);
+}
+
+body.theme-luka::after {
+    inset: 0;
+    z-index: -1;
+    background: var(--luka-page-overlay);
+    transition: background-color 0.25s ease;
 }
 
 body.theme-luka a {
@@ -445,6 +470,7 @@ body.theme-luka a:hover {
         --luka-map-grid: rgba(216, 137, 84, 0.16);
         --luka-map-point: rgba(216, 137, 84, 0.92);
         --luka-map-halo: rgba(216, 137, 84, 0.24);
+        --luka-page-overlay: rgba(33, 27, 20, 0.84);
     }
 }
 
